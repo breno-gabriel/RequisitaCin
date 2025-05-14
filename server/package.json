@@ -1,0 +1,37 @@
+{
+  "name": "requisita-cin",
+  "version": "1.0.0",
+  "description": "request system API, where students can create and track requests directed to a specific department within CIn ",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsup src/index.ts",
+    "start:dev": "tsx watch --clear-screen=false src/index.ts",
+    "start:prod": "node server/dist/index.js",
+    "lint": "biome lint",
+    "lint:fix": "biome lint --fix",
+    "format": "biome format --write",
+    "test": "vitest run",
+    "test:cov": "vitest run --coverage",
+    "migrate": "drizzle-kit push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/breno-gabriel/RequisitaCin.git"
+  },
+  "author": "Breno Gabriel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/breno-gabriel/RequisitaCin/issues"
+  },
+  "homepage": "https://github.com/breno-gabriel/RequisitaCin#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.18",
+    "tsx": "^4.19.4"
+  }
+}
